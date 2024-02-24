@@ -1,0 +1,20 @@
+.buttonApplication {
+    padding: 15px;
+    font-family: Bahnschrift;
+    font-size: 16px;
+    font-weight: bold;
+    background: #470087;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: #380073 1px 3px;
+    transition: 0.3s;
+    color: #b452ff;
+}
+
+.buttonApplication:hover {
+    transform: translateY(2px);
+    box-shadow: #380073 1px 1px;
+    color: white;
+    background: #8f53db;
+}

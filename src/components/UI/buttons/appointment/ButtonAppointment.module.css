@@ -1,0 +1,20 @@
+.buttonAppointment {
+    padding: 15px;
+    font-family: Bahnschrift;
+    font-size: 16px;
+    font-weight: bold;
+    background: #b452ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: #9f03ff 1px 3px;
+    transition: 0.3s;
+    color: #470087;
+}
+
+.buttonAppointment:hover {
+    transform: translateY(2px);
+    box-shadow: #9f03ff 1px 1px;
+    color: white;
+    background: #8f53db;
+}
