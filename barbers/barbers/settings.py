@@ -77,8 +77,15 @@ WSGI_APPLICATION = 'barbers.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'barbers',
+        'OPTIONS': {
+            'options': '-c search_path=main'
+        },
+        'USER': 'developer',
+        'PASSWORD': 'mati123$',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

@@ -3,7 +3,6 @@ from django.shortcuts import render
 
 def account(request): #todo
     manager_id = request.GET['id']
-
     return HttpResponse(f"This is manager account\nYour id: {manager_id}")
 
 def dashboard(request): #todo
