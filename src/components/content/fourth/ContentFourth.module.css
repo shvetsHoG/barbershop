@@ -1,0 +1,24 @@
+.wrapper {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 80%;
+    margin-top: -75px;
+}
+
+.boxWrapper {
+    width: 370px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

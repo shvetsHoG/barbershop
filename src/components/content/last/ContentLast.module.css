@@ -1,0 +1,39 @@
+.wrapper {
+    width: 100%;
+    background-color: #fff;
+}
+
+.content {
+    color: #0f0a04;
+    text-align: center;
+}
+
+.alert {
+    font-size: 56px;
+    font-weight: 900;
+    font-family: "Open sans", sans-serif;
+}
+
+.miniAlert {
+    padding-top: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Open sans", sans-serif;
+}
+
+.box {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 0 60px;
+}
+
+.item {
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.item:hover {
+    color: #b452ff;
+}

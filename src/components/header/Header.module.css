@@ -1,0 +1,28 @@
+.appHeaderWrapper {
+    background: #0f0a04;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 1;
+}
+
+.appHeader {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.appHeaderImg {
+    margin-left: 15px;
+    width: 30px;
+    height: 40px;
+    background-image: url("../../images/1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}

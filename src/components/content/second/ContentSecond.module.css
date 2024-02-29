@@ -1,0 +1,57 @@
+.contentWrapper {
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.content {
+    font-family: "Open sans", sans-serif;
+    width: 75%;
+    display: flex;
+    gap: 0 30px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text {
+    margin-right: 30px;
+}
+
+.img1 {
+    width: 350px;
+    height: 366px;
+    background-image: url("../../../images/secondImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img2 {
+    width: 350px;
+    height: 366px;
+    background-image: url("../../../images/thirdImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.spans {
+    position: relative;
+    top: 280px;
+    left: 50px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.span1 {
+    margin-bottom: 10px;
+}
+
+.span1 span{
+    background-color: #8f53db;
+}
+
+.span2 span{
+    background-color: #fff;
+    font-weight: 900;
+}

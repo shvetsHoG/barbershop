@@ -1,0 +1,50 @@
+.contentWrapper {
+    width: 70%;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns {
+    display: flex;
+    width: 375px;
+    justify-content: space-between;
+}
+
+.contentSecond {
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    width: 430px;
+    height: 500px;
+    background-image: url("../../../images/firstImg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 25px;
+}
+
+.contentSecondText {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    line-height: 25px;
+}
+
+.contentFirst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+}
+
+.contentFirstText {
+    line-height: 50px;
+    font-family: "Kanit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,15 @@
+.Links {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.LinksChild {
+    transition: 0.3s;
+}
+
+.LinksChild:hover {
+    color: #b452ff;
+}

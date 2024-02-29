@@ -1,14 +1,13 @@
 import React from 'react';
 import ButtonAppointment from "../UI/buttons/appointment/ButtonAppointment";
 import HeaderLinks from "./HeaderLinks";
+import classes from "./Header.module.css";
 
 const Header = ({img}) => {
     return (
-        <div className="app_header_wrapper">
-            <div className="app_header">
-                <div className="app_header_img">
-                    <img className="app_header_img" src={img} alt="Барбершоп"/>
-                </div>
+        <div className={classes.appHeaderWrapper}>
+            <div className={classes.appHeader}>
+                <div className={classes.appHeaderImg}></div>
                 <HeaderLinks />
                 <ButtonAppointment>ОНЛАЙН-ЗАПИСЬ</ButtonAppointment>
             </div>

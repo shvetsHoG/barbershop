@@ -1,16 +1,15 @@
 import './styles/App.css';
-import mainImg from './images/main-img.jpg';
 import iconImg from './images/barber-shop.svg';
+import firstImg from './images/firstImg.jpg';
+import secondImg from './images/secondImg.jpg';
+import thirdImg from './images/thirdImg.jpg';
 import Header from "./components/header/Header";
-import ContentFirst from "./components/content/ContentFirst";
-import ContentSecond from "./components/content/ContentSecond";
-
+import Content from "./components/content/Content";
 function App() {
   return (
     <div className="app">
         <Header img={iconImg}/>
-        <ContentFirst mainImg={mainImg}/>
-        <ContentSecond/>
+        <Content firstImg={firstImg} secondImg={secondImg} thirdImg={thirdImg}/>
     </div>
   );
 }
