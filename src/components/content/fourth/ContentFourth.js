@@ -4,7 +4,7 @@ import image from "../../../images/fourthImg.jpg"
 import classes from "./ContentFourth.module.css";
 import Box from "../../UI/box/Box";
 
-const ContentFourth = () => {
+const ContentFourth = ({setModalVisible}) => {
     return (
         <div className={classes.wrapper}>
             <div className={classes.holder}>
@@ -14,7 +14,7 @@ const ContentFourth = () => {
                 <Img url={image}/>
                 <Img url={image}/>
                 <div className={classes.boxWrapper}>
-                    <Box child1Up={"ХОЧЕШЬ"} child1Down={"ТАК ЖЕ?"} child2={"ОНЛАЙН-ЗАПИСЬ"}/>
+                    <Box setModalVisible={setModalVisible} child1Up={"ХОЧЕШЬ"} child1Down={"ТАК ЖЕ?"} child2={"ОНЛАЙН-ЗАПИСЬ"}/>
                 </div>
             </div>
         </div>

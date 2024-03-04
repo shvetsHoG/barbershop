@@ -5,13 +5,27 @@ import secondImg from './images/secondImg.jpg';
 import thirdImg from './images/thirdImg.jpg';
 import Header from "./components/header/Header";
 import Content from "./components/content/Content";
+import React, {useState} from "react";
+
 function App() {
-  return (
-    <div className="app">
-        <Header img={iconImg}/>
-        <Content firstImg={firstImg} secondImg={secondImg} thirdImg={thirdImg}/>
-    </div>
-  );
+
+    const [modalVisible, setModalVisible] = useState(false)
+    const [choice, setChoice] = useState("main")
+
+    const exit = () => {
+        setModalVisible(false)
+        setChoice("main")
+    }
+
+    return (
+        <div className="app">
+            <Header modalVisible={modalVisible} setModalVisible={setModalVisible} img={iconImg}/>
+            <Content modalVisible={modalVisible} setModalVisible={setModalVisible}
+                     firstImg={firstImg} secondImg={secondImg} thirdImg={thirdImg}
+                     choice={choice} setChoice={setChoice} exit={exit}
+            />
+        </div>
+    );
 }
 
 export default App;

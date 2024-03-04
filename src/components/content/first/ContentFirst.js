@@ -3,7 +3,7 @@ import ButtonAppointment from "../../UI/buttons/appointment/ButtonAppointment";
 import ButtonApplication from "../../UI/buttons/application/ButtonApplication";
 import classes from "./ContentFirst.module.css";
 
-const ContentFirst = ({mainImg}) => {
+const ContentFirst = ({setModalVisible}) => {
     return (
         <div className={classes.contentWrapper}>
             <div className={classes.content}>
@@ -15,7 +15,7 @@ const ContentFirst = ({mainImg}) => {
                         <span style={{fontSize:"56px", color:"#470087", fontWeight:"900", fontStyle:"italic"}}>700 РУБЛЕЙ</span>
                     </div>
                     <div className={classes.btns}>
-                        <ButtonAppointment>ОНЛАЙН-ЗАПИСЬ</ButtonAppointment>
+                        <ButtonAppointment onClick={() => setModalVisible(true)}>ОНЛАЙН-ЗАПИСЬ</ButtonAppointment>
                         <ButtonApplication>ОСТАВИТЬ ЗАЯВКУ</ButtonApplication>
                     </div>
                 </div>

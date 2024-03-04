@@ -44,6 +44,18 @@
     color: #b452ff;
 }
 
+.phoneWrapper {
+    display: flex;
+    gap: 5px;
+}
+
+.phoneSvg {
+    margin-top: 3px;
+    fill: #fff;
+    transition: 0.2s;
+}
+
+
 .phone {
     border-image-source: linear-gradient(90deg, rgba(56,0,115,1) 0%, rgba(9,9,121,1) 63%, rgba(143,83,219,1) 100%);
     border-image-slice: 1;
@@ -53,8 +65,12 @@
 }
 
 
-.phone:hover {
+.phoneWrapper:hover {
     color: #b452ff;
+}
+
+.phoneWrapper:hover .phoneSvg {
+    fill: #b452ff;
 }
 
 .time {
@@ -64,14 +80,4 @@
     padding-bottom: 5px;
     border-right: 5px solid;
     padding-right: 5px;
-}
-
-.phone:after {
-    position: absolute;
-    content: "";
-    height: 30px;
-    width: 30px;
-    background-image: url("../../../images/phone.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }

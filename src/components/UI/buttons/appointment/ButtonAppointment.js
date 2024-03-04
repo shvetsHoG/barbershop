@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from "./ButtonAppointment.module.css"
 
-const ButtonAppointment = ({children}) => {
+const ButtonAppointment = ({children, ...props}) => {
     return (
-        <button className={classes.buttonAppointment}>{children}</button>
+        <button {...props} className={classes.buttonAppointment}>{children}</button>
     );
 };
 

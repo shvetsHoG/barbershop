@@ -55,3 +55,30 @@
     background-color: #fff;
     font-weight: 900;
 }
+
+:root {
+    --gradient : linear-gradient(90deg, rgba(56,0,115,1) 0%, rgba(43,43,255,1) 63%, rgba(61,97,255,1));
+}
+
+.coloredText {
+    font-family:"Open Sans", sans-serif;
+    font-weight:900;
+    font-size:44px;
+    line-height:40px;
+    font-style:Italic;
+    background-image: var(--gradient);
+    background-clip: text;
+    color: transparent;
+    animation: bg-animation 2s infinite alternate;
+    background-size: 400%;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}

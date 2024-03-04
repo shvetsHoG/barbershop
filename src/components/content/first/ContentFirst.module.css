@@ -42,6 +42,7 @@
 }
 
 .contentFirstText {
+    letter-spacing: -1px;
     line-height: 50px;
     font-family: "Kanit", sans-serif;
     display: flex;

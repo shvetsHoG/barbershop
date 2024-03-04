@@ -2,7 +2,7 @@ import React from 'react';
 import classes from "./Box.module.css";
 import ButtonAppointment from "../buttons/appointment/ButtonAppointment";
 
-const Box = ({child1Up, child1Down, child2}) => {
+const Box = ({child1Up, child1Down, child2, setModalVisible}) => {
     return (
         <div className={classes.box}>
             <div className={classes.wrapper}>
@@ -10,7 +10,7 @@ const Box = ({child1Up, child1Down, child2}) => {
                     <span>{child1Up}</span>
                     <span style={{color:"#b452ff"}}>{child1Down}</span>
                 </div>
-                <ButtonAppointment>{child2}</ButtonAppointment>
+                <ButtonAppointment onClick={() => setModalVisible(true)}>{child2}</ButtonAppointment>
             </div>
         </div>
     );

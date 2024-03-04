@@ -9,7 +9,7 @@ const ContentThird = () => {
             <div className={classes.content}>
                 <div className={classes.text}>
                     <span >ЭТО СТРИЖКИ </span>
-                    <span style={{color:"#470087"}}>НАШИХ КЛИЕНТОВ</span>
+                    <span className={classes.coloredText}>НАШИХ КЛИЕНТОВ</span>
                 </div>
             </div>
         </div>

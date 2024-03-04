@@ -6,8 +6,7 @@ const ContentSecond = () => {
         <div className={classes.contentWrapper}>
             <div className={classes.content}>
                 <div className={classes.text}>
-                    <span style={{fontFamily:"Open Sans", color:"#470087", fontWeight:"900",
-                        fontSize:"44px", lineHeight:"40px", fontStyle:"Italic"}}>
+                    <span className={classes.coloredText}>
                         НИЧЕГО <br/>
                         ЛИШНЕГО
                     </span>
