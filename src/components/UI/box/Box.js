@@ -1,8 +1,13 @@
 import React from 'react';
 import classes from "./Box.module.css";
 import ButtonAppointment from "../buttons/appointment/ButtonAppointment";
+import {setModalVisible} from "../../../store/slices/ModalVisibleSlice";
+import {useDispatch} from "react-redux";
 
-const Box = ({child1Up, child1Down, child2, setModalVisible}) => {
+const Box = ({child1Up, child1Down, child2}) => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className={classes.box}>
             <div className={classes.wrapper}>
@@ -10,7 +15,7 @@ const Box = ({child1Up, child1Down, child2, setModalVisible}) => {
                     <span>{child1Up}</span>
                     <span style={{color:"#b452ff"}}>{child1Down}</span>
                 </div>
-                <ButtonAppointment onClick={() => setModalVisible(true)}>{child2}</ButtonAppointment>
+                <ButtonAppointment onClick={() => dispatch(setModalVisible(true))}>{child2}</ButtonAppointment>
             </div>
         </div>
     );

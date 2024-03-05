@@ -2,8 +2,13 @@ import React from 'react';
 import ButtonAppointment from "../../UI/buttons/appointment/ButtonAppointment";
 import ButtonApplication from "../../UI/buttons/application/ButtonApplication";
 import classes from "./ContentFirst.module.css";
+import {setModalVisible} from "../../../store/slices/ModalVisibleSlice";
+import {useDispatch} from "react-redux";
 
-const ContentFirst = ({setModalVisible}) => {
+const ContentFirst = () => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className={classes.contentWrapper}>
             <div className={classes.content}>
@@ -15,7 +20,7 @@ const ContentFirst = ({setModalVisible}) => {
                         <span style={{fontSize:"56px", color:"#470087", fontWeight:"900", fontStyle:"italic"}}>700 РУБЛЕЙ</span>
                     </div>
                     <div className={classes.btns}>
-                        <ButtonAppointment onClick={() => setModalVisible(true)}>ОНЛАЙН-ЗАПИСЬ</ButtonAppointment>
+                        <ButtonAppointment onClick={() => dispatch(setModalVisible(true))}>ОНЛАЙН-ЗАПИСЬ</ButtonAppointment>
                         <ButtonApplication>ОСТАВИТЬ ЗАЯВКУ</ButtonApplication>
                     </div>
                 </div>

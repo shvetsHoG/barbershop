@@ -9,18 +9,16 @@ import ContentSixth from "./sixth/ContentSixth";
 import ContentLast from "./last/ContentLast";
 import Modal from "../UI/modal/Modal";
 
-const Content = ({secondImg, thirdImg, modalVisible, setModalVisible, choice, setChoice, exit}) => {
+const Content = ({secondImg, thirdImg}) => {
 
     return (
         <div className={classes.ContentWrapper}>
             <div className={classes.Content}>
-                <ContentFirst setModalVisible={setModalVisible}/>
-                <Modal exit={exit} choice={choice} setChoice={setChoice}
-                       modalVisible={modalVisible} setModalVisible={setModalVisible}>
-                </Modal>
+                <ContentFirst/>
+                <Modal />
                 <ContentSecond secondImg={secondImg} thirdImg={thirdImg}/>
                 <ContentThird />
-                <ContentFourth setModalVisible={setModalVisible}/>
+                <ContentFourth />
                 <ContentFifth />
                 <ContentSixth />
                 <ContentLast />
