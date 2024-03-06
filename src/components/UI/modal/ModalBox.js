@@ -3,6 +3,7 @@ import classes from "./ModalBox.module.css";
 import {setModalVisible} from "../../../store/slices/ModalVisibleSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {setChoice} from "../../../store/slices/ChoiceSlice";
+import {setAllFalse} from "../../../store/slices/ClassListSlice";
 
 const ModalBox = ({text, children}) => {
 
@@ -26,6 +27,7 @@ const ModalBox = ({text, children}) => {
     const exit = () => {
         dispatch(setModalVisible(false))
         dispatch(setChoice("main"))
+        dispatch(setAllFalse())
     }
 
     return (
@@ -34,7 +36,10 @@ const ModalBox = ({text, children}) => {
                 <div className={classes.content}>
                     <div className={btnClassList.join(" ")}>
                         {choice !== "main" &&
-                            <button className={classes.closeBtn} onClick={() => dispatch(setChoice("main"))}>
+                            <button className={classes.closeBtn} onClick={() => {
+                                dispatch(setChoice("main"))
+                                dispatch(setAllFalse())
+                            }}>
                                 <svg className={classes.closeSvg} width="25px" height="25px" fill="#fff" id="left-arrow-backward-sign" version="1.1" viewBox="0 0 15.699 8.707" ><polygon points="15.699,3.854 1.914,3.854 5.061,0.707 4.354,0 0,4.354 4.354,8.707 5.061,8 1.914,4.854 15.699,4.854 "/></svg>
                             </button>
                         }

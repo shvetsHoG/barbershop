@@ -57,6 +57,11 @@
     justify-content: space-between;
 }
 
+.btnAppWrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .closeBtn {
     border: none;
     width: 20px;

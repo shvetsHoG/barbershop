@@ -6,16 +6,11 @@ import ModalBox from "./ModalBox";
 import ButtonAppointment from "../buttons/appointment/ButtonAppointment";
 import {useDispatch, useSelector} from "react-redux";
 import {setChoice} from "../../../store/slices/ChoiceSlice";
-import {store} from "../../../store";
+import classes from "./ModalBox.module.css";
 
 const Modal = () => {
 
-    const arrayServices = [
-        "Любой специалист",
-        "Амаяк",
-        "Молодой мастер",
-        "Андрей"
-    ]
+    const arrayServices = useSelector(state => state.list.masters)
 
     const dispatch = useDispatch()
 
@@ -38,19 +33,23 @@ const Modal = () => {
     const getModalMasters = () =>
         <ModalBox text="Выбрать специалиста">
             {arrayServices.map(
-                service => <ChooseButton onClick={(e) => console.log(e)}
-                                         text={service} ></ChooseButton>
+                service => <ChooseButton id={service.id} focus={service.focus}
+                                         text={service.name} ></ChooseButton>
             )}
-            <ButtonAppointment>Выбрать услугу</ButtonAppointment>
+            <div className={classes.btnAppWrapper}>
+                <ButtonAppointment>Выбрать услугу</ButtonAppointment>
+            </div>
         </ModalBox>
 
     const getModalServices = () =>
         <ModalBox text="Выбрать услугу">
             {arrayServices.map(
-                service => <ChooseButton onClick={(e) => console.log(e.target)}
+                service => <ChooseButton
                                          text={"Стрижка"} ></ChooseButton>
             )}
-            <ButtonAppointment>Выбрать специалиста</ButtonAppointment>
+            <div className={classes.btnAppWrapper}>
+                <ButtonAppointment>Выбрать специалиста</ButtonAppointment>
+            </div>
         </ModalBox>
 
 
