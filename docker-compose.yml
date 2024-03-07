@@ -1,6 +1,7 @@
+version: "3.8"
 services:
   django-apache2:
-    build: ..
+    build: .
     container_name: django-apache2
     ports:
       - '8005:80'

@@ -2,11 +2,9 @@ FROM ubuntu:latest
 
 RUN apt-get update
 RUN apt-get install -y apt-utils vim curl apache2 apache2-utils
-RUN apt-get install -y python3 \
-    libapache2-mod-wsgi-py3 \
-    python3-pip \
-RUN ln /usr/bun/python3 /usr/bin/python
-RUN ln /usr/bun/pip3 /usr/bin/pip
+RUN apt-get install -y python3
+RUN apt-get install -y libapache2-mod-wsgi-py3
+RUN apt-get install -y python3-pip
 RUN pip install --upgrade pip
 RUN pip install django
 
