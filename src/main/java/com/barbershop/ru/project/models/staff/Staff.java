@@ -2,6 +2,7 @@ package com.barbershop.ru.project.models.staff;
 
 import com.barbershop.ru.project.models.Appointment;
 import com.barbershop.ru.project.models.Barbershop;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 
@@ -17,6 +18,7 @@ public class Staff {
 
     @ManyToOne
     @JoinColumn(name = "barbershop_id", referencedColumnName = "id")
+    @JsonIgnore
     private Barbershop barbershop;
 
     @Column(name = "fullname")
@@ -24,6 +26,7 @@ public class Staff {
 
     @Column(name = "position")
     @Enumerated(EnumType.ORDINAL)
+    @JsonIgnore
     private Position position;
 
     @Column(name = "phone")
@@ -33,6 +36,7 @@ public class Staff {
     private String mail;
 
     @OneToMany(mappedBy = "staff")
+    @JsonIgnore
     private List<Appointment> appointments;
 
     public Staff() {
@@ -60,14 +64,6 @@ public class Staff {
 
     public void setBarbershop(Barbershop barbershop) {
         this.barbershop = barbershop;
-    }
-
-    public String getFullname() {
-        return fullname;
-    }
-
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
     }
 
     public Position getPosition() {
@@ -100,5 +96,13 @@ public class Staff {
 
     public void setAppointments(List<Appointment> appointments) {
         this.appointments = appointments;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 }

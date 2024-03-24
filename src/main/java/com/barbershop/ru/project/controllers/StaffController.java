@@ -1,9 +1,8 @@
 package com.barbershop.ru.project.controllers;
 
 
+import com.barbershop.ru.project.models.staff.Staff;
 import com.barbershop.ru.project.services.StaffService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,20 +16,19 @@ import java.util.List;
 public class StaffController {
 
     private final StaffService staffService;
-    ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
     @Autowired
     public StaffController(StaffService staffService) {
         this.staffService = staffService;
     }
 
-
-    @GetMapping()
-    public String sayHello() {
-        return null;
+    @GetMapping("/masters")
+    public List<Staff> getMasters() {
+        return staffService.findAll();
     }
 
-    @GetMapping("/masters")
-    public String getMasters() {return null;}
-
+    @GetMapping("/master")
+    public Staff getMaster() {
+        return staffService.findOne(2);
+    }
 }
